@@ -1,9 +1,15 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Assign name using default if no argument is given
-        String name = (args.length > 0) ? args[0] : "World";
+        String names;
 
-        System.out.println("Hello, " + name + "!");
+        // If arguments are provided → join them
+        if (args.length > 0) {
+            names = String.join(", ", args);
+        } else {
+            names = "World";
+        }
+
+        System.out.println("Hello, " + names + "!");
     }
 }
